@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="jp">
-<head>
-    <meta charset="UTF-8">
-    <title>Flaskblog</title>
-</head>
-<body>
-    <h1>Hello World!</h1>
-</body>
-</html>
+{% extends "base.html"%} 
+
+{% block content %}
+
+<h1>Flask Blog</h1>
+
+<p><a href="/create" role="button">新規登録</a></p>
+
+<article>
+  
+  <h2>ホーム画面</h2>
+  <p>こちらはFlask Blogのホーム画面です。</p>
+
+  {% for post in posts %}
+
+  <a href="/{{post.id}}/view" role="button"><h2>{{post.title}}</h2></a>
+
+  {% endfor %}
+
+</article>
+
+{% endblock %}

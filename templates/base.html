@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <title>Flaskblog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   </head>
   <body>
     {% block content %} {% endblock %}
-    <h4>テンプレート</h4>
   </body>
 </html>
